@@ -27,8 +27,18 @@ const images = [
 
 
 const gallery = document.querySelector(".gallery")
+console.log(gallery);
 
-let gals = document.createElement("div")
+const markup = images.map((im)=>`<li class="pic" src="${im.url}" alt="${im.alt}"></li>`).join("");
+console.log(markup);
+
+
+gallery.insertAdjacentHTML("beforeend", markup);
+console.log(gallery);
+
+
+
+/*let gals = document.createElement("div")
 images.forEach(im =>{
   let gal = document.createElement("li")
   gal.innerHTML =`<img src=${im.url} alt=${im.alt} class="pic"/>`
@@ -37,4 +47,4 @@ images.forEach(im =>{
   gallery.append(gal)
 })
 
-//gallery.append(gals)
+//gallery.append(gals)*/
