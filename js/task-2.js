@@ -29,13 +29,14 @@ const images = [
 const gallery = document.querySelector(".gallery")
 console.log(gallery);
 
-const markup = images.map((im)=>`<li class="pic" src="${im.url}" alt="${im.alt}"></li>`).join("");
+const markup = images.map((im)=>`<li> <img class='pic' src="${im.url}" alt="${im.alt}"/></li>`).join("");
 console.log(markup);
 
 
-gallery.insertAdjacentHTML("beforeend", markup);
+gallery.insertAdjacentHTML("afterbegin", markup);
 console.log(gallery);
-
+//gallery.innerHTML = `<li class="pic" src="${.url}" alt="${im.alt}"></li>`
+//gallery.innerHTML = `<li class="pic" src="${images[1].url}" alt="${images[1].alt}"></li>`
 
 
 /*let gals = document.createElement("div")
